@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE control_vehiculo SYSTEM "">
+<control_vehiculo>
+    <secuencia>
+        <accion>radio:volumen_0</accion>
+
+        <si>
+            <condicion>temperatura_exterior > 30</condicion>
+            <secuencia>
+                <accion>clima:modo_ventilacion_activa</accion>
+            </secuencia>
+        </si>
+
+        <repetir>
+            <veces>2</veces>
+            <secuencia>
+                <accion>luces:emergencia_on</accion>
+                <accion>luces:emergencia_off</accion>
+            </secuencia>
+        </repetir>
+
+        <accion>seguros:bloqueados</accion>
+        <accion>motor:apagado</accion>
+    </secuencia>
+</control_vehiculo>

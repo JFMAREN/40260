@@ -1,0 +1,11 @@
+<!ELEMENT control_vehiculo (secuencia)>
+
+<!ELEMENT secuencia (accion | si | repetir)*>
+
+<!ELEMENT accion (#PCDATA)>
+
+<!ELEMENT si (condicion, secuencia)>
+<!ELEMENT condicion (#PCDATA)>
+
+<!ELEMENT repetir (veces, secuencia)>
+<!ELEMENT veces (#PCDATA)>
